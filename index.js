@@ -2,6 +2,7 @@ const express = require('express');
 const con = require('./config');
 const path = require('path');
 const bodyParser = require("body-parser");
+const { error } = require('console');
 
 
 const app = express();
@@ -16,6 +17,7 @@ app.get('',(_,res)=>{
     res.render('home');
 });
 
+
 app.get('/show', (_, res) => {
     con.query("select * from books", (err, result) => {
         if (err) {
@@ -27,16 +29,11 @@ app.get('/show', (_, res) => {
     });
 });
 
+
+
 app.get('/newbook',(_,res)=>{
     res.render('newBooks');
 });
-
-
-app.get('*',(_,res)=>{
-    res.render('404');
-});
-
-
 app.post('/newbooks',(req,res)=>{
     let data = req.body;
     con.query('INSERT into books SET?',data,(err,result,fields)=>{
@@ -44,6 +41,27 @@ app.post('/newbooks',(req,res)=>{
         res.render('home')
     })
 });
+
+
+app.get('/updatebook',(_,res)=>{
+    res.render('updatebook');
+});
+app.post('/updatebooks',(req,res)=>{
+    let data = [req.body.Name, req.body.Price, req.body.Type, req.body.Id];
+    con.query('UPDATE books SET Name=?,Price=?,Type=? WHERE Id=?',data,(err,result,fields)=>{
+        if(err) throw err
+        res.render('home')
+    })
+});
+
+
+
+app.get('*',(_,res)=>{
+    res.render('404');
+});
+
+
+
 
 
 app.delete('/:id',(req,res)=>{
