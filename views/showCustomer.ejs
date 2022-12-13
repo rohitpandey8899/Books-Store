@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Books</title>
+    <style>
+        div {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;"> List of books Screen purchased by customer</h1>
+    <ul>
+        <% data.forEach((item)=> { %>
+            <li>
+                <h2>
+                    Customer Name : <%= item.cust %>
+                </h2>
+                <div>
+                    <p>
+                       Customer Address: <%= item.address %>
+                    </p>
+                    <p>
+                        Cuctomer PhoneNo : <%= item.contact %>
+                    </p>
+                    <p>
+                        Quantity : <%= item.qty %>
+                    </p>
+                    <p>
+                        Price At : <%= item.price %>
+                    </p>
+                </div>
+            </li>
+            <hr />
+            <% }) %>
+    </ul>
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Update BOOK</title>
+    <title>New BOOK</title>
     <style>
        .form-style-9{
 	max-width: 450px;
@@ -76,17 +76,17 @@
        </style>
 </head>
 <body>
-	<h1 style="text-align: center;"> Update Book</h1>
-    <form class="form-style-9" action="/updatebooks" method="post">
+	<h1 style="text-align: center;"> Purchase Book</h1>
+    <form class="form-style-9" action="/purchBook" method="post">
         <ul>
         <li>
-			<input type="number" name="Id" class="field-style field-split align-left" placeholder="Book Id" />
-            <input type="text" name="Name" class="field-style field-split align-left" placeholder="Name" />
-            <input type="text" name="Type" class="field-style field-split align-right" placeholder="Type" />
+            <input type="number" name="sellerID" class="field-style field-split align-left" placeholder="Seller ID" />
+            <input type="number" name="custID" class="field-style field-split align-right" placeholder="Customer ID" />
         
         </li>
         <li>
-            <input type="number" name="Price" class="field-style field-split align-left" placeholder="Price" />
+            <input type="number" name="qty" class="field-style field-split align-left" placeholder="Quantity" />
+            <input type="number" name="price" class="field-style field-split align-left" placeholder="Price" />
         </li>
         <li>
         <input type="submit"/>

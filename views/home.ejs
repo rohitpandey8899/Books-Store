@@ -3,9 +3,15 @@
 
 <head>
   <style>
+    body {
+      background-color: #e5e6e1;
+    }
+
     .content {
       max-width: 500px;
       margin: auto;
+      background-color: #c7c4c4;
+      border-radius: 15px;
     }
 
     .Btcontent {
@@ -15,7 +21,26 @@
       align-items: center;
     }
 
+    .logobb {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     h1 {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+    
+    .off {
+      text-align: center;
+      color: yellowgreen;
+    }
+
+    p {
       text-align: center;
     }
 
@@ -29,29 +54,51 @@
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
+      border-radius: 15px;
     }
 
     .button {
       background-color: #000000;
     }
+
+    .logo {
+      background-color: #000000;
+      color: #c7c4c4;
+    }
   </style>
 </head>
 
 <body>
+  <div class="logobb">
+    <h1>Reed</h1>
+    <h2 class="logo">booK</h2>
+  </div>
+  <hr>
+  <div class="content">
+    <h1>Wellcome to Book Store</h1>
+  </div>
+  <h2 class="off">UpTo 50% OFF</h2>
+  <p>Best seller in Dehradun</p>
+  <hr>
+  <h2>Create API</h2>
   <div class="Btcontent">
     <button class="button button" onclick="window.location.href = 'newbook'">New Book</button>
-    <button class="button button" onclick="window.location.href = 'show'">Show Books</button>
-    <button class="button button" onclick="window.location.href = 'updatebook'">Update Book</button>
-    <button class="button button">New Customer</button>
-    <button class="button button">Show Customer</button>
-    <img src="imges/Gamon.png" alt="" srcset="" height="20px" width="20px">
+    <button class="button button" onclick="window.location.href = 'newseller'">New Seller</button>
+    <button class="button button" onclick="window.location.href = 'newcustomer'">New Customer</button>
+    <button class="button button" onclick="window.location.href = 'purchaseBook'">Purchase Book</button>
   </div>
-  <div class="content">
-
-    <h1>Wellcome to Book Store</h1>
-    <p></p>
-
-
+  <h2>Update API</h2>
+  <div class="Btcontent">
+    <button class="button button" onclick="window.location.href = 'updatebook'">Update Book</button>
+    <button class="button button" onclick="window.location.href = 'updateseller'">Update Sellers</button>
+    <button class="button button" onclick="window.location.href = 'updatecustomer'">Update Customer</button>
+  </div>
+  <h2>Show API</h2>
+  <div class="Btcontent">
+    <button class="button button" onclick="window.location.href = 'showCustomer'">List of books Screen purchased by
+      customer</button>
+    <button class="button button" onclick="window.location.href = 'showSeller'">List of books Screen sold by
+      seller</button>
   </div>
 </body>
 
